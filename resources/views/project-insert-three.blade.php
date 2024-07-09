@@ -21,7 +21,6 @@
                         <button type="button" id="jjj">Submit</button> -->
                     <!-- </form> -->
                     <div class="card-header">Schritt 3: Daten eintragen in die Kategorie: {{ $cats->name }}</div>
-                    {{$cats->code}}
                     <div class="card-body">
 
                         @include('' . $cats->code)

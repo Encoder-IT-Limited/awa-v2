@@ -51,7 +51,7 @@
             font-size: 84px;
         }
 
-        .links > a {
+        .links>a {
             color: #636b6f;
             padding: 0 25px;
             font-size: 12px;
@@ -77,7 +77,7 @@
         var countDownDate = new Date("Oct 1, 2021 20:20:20").getTime();
 
         // Update the count down every 1 second
-        var x = setInterval(function () {
+        var x = setInterval(function() {
 
             // Get today's date and time
             var now = new Date().getTime();
@@ -106,28 +106,28 @@
 </head>
 
 <body>
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Einloggen</a>
-                <a href="{{ route('register') }}">Registrieren</a>
-            @endauth
-        </div>
-    @endif
+    <div class="flex-center position-ref full-height">
+        @if (Route::has('login'))
+            <div class="top-right links">
+                @auth
+                    <a href="{{ url('/home') }}">Home</a>
+                @else
+                    <a href="{{ route('login') }}">Einloggen</a>
+                    <a href="{{ route('register') }}">Registrieren</a>
+                @endauth
+            </div>
+        @endif
 
-    <div class="content">
-        <div class="title m-b-md">
-            Austrian Wedding Award {{ \Carbon\Carbon::now()->addYear(1)->year }}
+        <div class="content">
+            <div class="title m-b-md">
+                Austrian Wedding Award 2024<br>
             </div>
             <br>
             <h4>Die Einreichungen zum Austrian Wedding Award sind kostenpflichtig!</h4><br><br>
             <div class="home-msg">
-                Die Kosten für die erste Einreichung beträgt <strong> € 120,- inkl. Ust.</strong><br>
+                Die Kosten für die erste Einreichung betragen <strong> € 120,- inkl. Ust.</strong><br>
                 Darauffolgende Einreichungen kosten <strong>€ 48,- inkl. Ust.</strong><br><br>
-                Wir weisen darauf hin, dass alle Projekte, die bis 15. November {{ \Carbon\Carbon::now()->year }}<br>
+                Wir weisen darauf hin, dass alle Projekte, die bis 15. November 2023<br>
                 hochgeladen werden, auch verrechnet werden.<br><br>
                 Für eine Bearbeitungsgebühr von <strong>€ 18,- inkl. Ust.</strong> kümmern<br>
                 wir uns um deinen Upload.<br>
