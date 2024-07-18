@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="546d0080-f92d-4df1-bf59-ee0e4dccd8a9" name="Changes" comment="Update route added">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="546d0080-f92d-4df1-bf59-ee0e4dccd8a9" name="Changes" comment="Update to master" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +15,37 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1721281396" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1721281395" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php">
     <include_path>
@@ -212,6 +239,7 @@
       <workItem from="1719575900778" duration="1862000" />
       <workItem from="1719805668884" duration="661000" />
       <workItem from="1719890590408" duration="355000" />
+      <workItem from="1721281385624" duration="320000" />
     </task>
     <task id="LOCAL-00001" summary="Update and delete route added">
       <option name="closed" value="true" />
@@ -261,7 +289,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720153830573</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update to master">
+      <option name="closed" value="true" />
+      <created>1721281502636</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721281502636</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,6 +308,7 @@
     <MESSAGE value="Task 5" />
     <MESSAGE value="!Category Forms Created." />
     <MESSAGE value="Update route added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update route added" />
+    <MESSAGE value="Update to master" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to master" />
   </component>
 </project>
