@@ -18,3 +18,8 @@ yarn-error.log
 /.vscode
 /.scribe
 /**/*.zip
+/.idea
+/.idea/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/bootstrap/cache/*
