@@ -32,7 +32,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1721281396" />
+                    <option name="lastUsedInstant" value="1721281723" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -240,6 +240,7 @@
       <workItem from="1719805668884" duration="661000" />
       <workItem from="1719890590408" duration="355000" />
       <workItem from="1721281385624" duration="320000" />
+      <workItem from="1721281715959" duration="589000" />
     </task>
     <task id="LOCAL-00001" summary="Update and delete route added">
       <option name="closed" value="true" />
@@ -297,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721281502636</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update to master">
+      <option name="closed" value="true" />
+      <created>1721281884039</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1721281884039</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
