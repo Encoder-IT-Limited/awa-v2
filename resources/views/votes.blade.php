@@ -226,7 +226,7 @@
         </div>
     @else
         <div class="message-container mt-4 pt-4">
-            <h3>ONLINE VOTING KATEGORIE STYLED SHOOT TEAM 2024</h3>
+            <h3>ONLINE VOTING KATEGORIE STYLED SHOOT TEAM 2025</h3>
             <h1><b>ABGESCHLOSSEN</b></h1><br/><br/>
         </div>
     @endif

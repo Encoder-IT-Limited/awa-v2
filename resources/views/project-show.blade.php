@@ -69,7 +69,6 @@
                                             @if ($project->rating_visible)
                                                 <p style="">
                                                     <b>Bewertung:
-
                                                         @php
                                                             $max = max($cat_ids[$project->cat_id]);
                                                             $point = 100 - (($max - $project->count->sum('counts')) / $max) * 100;
@@ -95,57 +94,64 @@
                                                             <i class="fas fa-star en-rating-yellow"></i>
                                                         @endif
                                                         <!-- @isset($project->count)
-        @if ($project->count->sum('counts') >= 700)
-        <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-    @elseif($project->count->sum('counts') >= 499 && $project->count->sum('counts') <= 690)
-        <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="far fa-star"></i>
-    @elseif($project->count->sum('counts') >= 399 && $project->count->sum('counts') <= 498)
-        <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="far fa-star"></i>
-                                                                                                      <i class="far fa-star"></i>
-    @elseif($project->count->sum('counts') >= 100 && $project->count->sum('counts') <= 398)
-        <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="far fa-star"></i>
-                                                                                                      <i class="far fa-star"></i>
-                                                                                                      <i class="far fa-star"></i>
-    @elseif($project->count->sum('counts') >= 199 && $project->count->sum('counts') <= 298)
-        <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="far fa-star"></i>
-                                                                                                      <i class="far fa-star"></i>
-                                                                                                      <i class="far fa-star"></i>
-                                                                                                      <i class="far fa-star"></i>
-    @else
-        <i class="fas fa-star en-rating-yellow"></i>
-                                                                                                      <i class="far fa-star"></i>
-                                                                                                      <i class="far fa-star"></i>
-                                                                                                      <i class="far fa-star"></i>
-                                                                                                      <i class="far fa-star"></i>
-                                                                                                      <i class="far fa-star"></i>
-        @endif
-    @else
-        <i class="far fa-star"></i>
-                                                                                                  <i class="far fa-star"></i>
-                                                                                                  <i class="far fa-star"></i>
-                                                                                                  <i class="far fa-star"></i>
-                                                                                                  <i class="far fa-star"></i>
-                                                                                                  <i class="far fa-star"></i>
-    @endisset -->
+                                                            @if ($project->count->sum('counts') >= 700)
+                                                                <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+
+                                                            @elseif($project->count->sum('counts') >= 499 && $project->count->sum('counts') <= 690)
+                                                                <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+
+                                                            @elseif($project->count->sum('counts') >= 399 && $project->count->sum('counts') <= 498)
+                                                                <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+
+                                                            @elseif($project->count->sum('counts') >= 100 && $project->count->sum('counts') <= 398)
+                                                                <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+
+                                                            @elseif($project->count->sum('counts') >= 199 && $project->count->sum('counts') <= 298)
+                                                                <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+
+                                                            @else
+                                                                <i class="fas fa-star en-rating-yellow"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+                                                                                                                                                              <i class="far fa-star"></i>
+
+                                                            @endif
+                                                        @else
+                                                            <i class="far fa-star"></i>
+                                                                                                                                                      <i class="far fa-star"></i>
+                                                                                                                                                      <i class="far fa-star"></i>
+                                                                                                                                                      <i class="far fa-star"></i>
+                                                                                                                                                      <i class="far fa-star"></i>
+                                                                                                                                                      <i class="far fa-star"></i>
+
+                                                        @endisset -->
                                                     </b>
                                                 </p>
                                             @endif
@@ -252,7 +258,7 @@
                                                                 ->linkedin()
                                                                 ->telegram()
                                                                 ->reddit();
-                                                            
+
                                                         @endphp
                                                         <br>
                                                         {!! $shareComponent !!}
@@ -260,7 +266,8 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-danger"
-                                                            data-dismiss="modal">Schließen</button>
+                                                                data-dismiss="modal">Schließen
+                                                        </button>
                                                     </div>
                                                 </div>
 
@@ -272,12 +279,11 @@
                                     <br>
 
 
-
                                     @if ($project->youtube != '')
                                         <!-- <h1>Loading5....</h1> -->
                                         <h3><a href="{{$project->youtube}}" class="btn btn-primary">View Video</a></h3>
-                            <!-- dropbox -->
-                            <!-- <iframe src="{{ $project->youtube }}" height="280px" width="640px" allowfullscreen></iframe> -->
+                                        <!-- dropbox -->
+                                        <!-- <iframe src="{{ $project->youtube }}" height="280px" width="640px" allowfullscreen></iframe> -->
                                         <!-- <div style="padding:56.25% 0 0 0;position:relative;"><iframe
                                                                     src="{{ $project->youtube . '?h=60b811dbb0&amp;badge=0&amp;autopause=0&amp' }};autopause=0&amp;player_id=0&amp;app_id=58479"
                                                                     frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
@@ -311,15 +317,15 @@
                                     @endif
                                     <br>
                                     <div class="row">
-                                        <?php $imageCount = 0; ?>
+                                            <?php $imageCount = 0; ?>
                                         @foreach ($project->images as $image)
-                                            <?php $imageCount++; ?>
+                                                <?php $imageCount++; ?>
                                             <div class="column">
                                                 <div class="img-wrapper" id="thumb-<?php echo md5($image->filename); ?>">
                                                     <img src="{{ $image->thumb_url }}" alt="{{ $image->filename }}"
-                                                        style=''
-                                                        onclick="openModal('{{ $project->projektname }}'); currentSlide(<?php echo $imageCount; ?> , '<?php echo $project->projektname; ?>')"
-                                                        class="hover-shadow demo-<?php echo $project->projektname; ?> cursor">
+                                                         style=''
+                                                         onclick="openModal('{{ $project->projektname }}'); currentSlide(<?php echo $imageCount; ?> , '<?php echo $project->projektname; ?>')"
+                                                         class="hover-shadow demo-<?php echo $project->projektname; ?> cursor">
                                                 </div>
                                             </div>
                                         @endforeach
@@ -336,30 +342,30 @@
                                             @if ($user->rolle == 0 || $user->rolle == 9 || $user->rolle == 5)
                                                 @if ($project->stat == 1)
                                                     <button type="submit" class="btn btn-primary" value="delete"
-                                                        name="submit">
+                                                            name="submit">
                                                         {{ __('Löschen') }}
                                                     </button>
                                                     <button type="submit" class="btn btn-primary" value="change"
-                                                        name="submit">
+                                                            name="submit">
                                                         {{ __('Ändern') }}
                                                     </button>
                                                     <a href="{{ url('/project/add-image/' . $project->id . '/' . $project->cat_id) }}"
-                                                        class="btn btn-primary" disabled>Bild hinzufügen</a>
+                                                       class="btn btn-primary" disabled>Bild hinzufügen</a>
                                                     <a href="{{ url('/project/edit-image/' . $project->id . '/' . $project->cat_id) }}"
-                                                        class="btn btn-primary" disabled>Bild(er) ändern</a>
+                                                       class="btn btn-primary" disabled>Bild(er) ändern</a>
                                                 @elseif ($project->stat == 0)
                                                     <button type="submit" class="btn btn-primary" value="delete"
-                                                        name="submit">
+                                                            name="submit">
                                                         {{ __('Löschen') }}
                                                     </button>
                                                     <button type="submit" class="btn btn-primary" value="change"
-                                                        name="submit">
+                                                            name="submit">
                                                         {{ __('Ändern') }}
                                                     </button>
                                                     <a href="{{ url('/project/add-image/' . $project->id . '/' . $project->cat_id) }}"
-                                                        class="btn btn-primary">Bild hinzufügen</a>
+                                                       class="btn btn-primary">Bild hinzufügen</a>
                                                     <a href="{{ url('/project/edit-image/' . $project->id . '/' . $project->cat_id) }}"
-                                                        class="btn btn-primary">Bild(er) ändern</a>
+                                                       class="btn btn-primary">Bild(er) ändern</a>
                                                 @endif
                                             @endif
                                             <!-- bis hier kommentieren -->
@@ -370,12 +376,12 @@
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                             <div id="myModal-{{ $project->projektname }}"
-                                                class="modal modal modal-height-width en-p-20">
+                                                 class="modal modal modal-height-width en-p-20">
                                                 <span class="close cursor en-fs-30"
-                                                    onclick="closeModal('{{ $project->projektname }}')">&times;</span>
+                                                      onclick="closeModal('{{ $project->projektname }}')">&times;</span>
                                                 <div class="modal-content p-relative en-p-40 w-auto-h-100">
                                                     <div
-                                                        class="wide_wrapper text-center big-slider-image-container w-auto-h-100">
+                                                            class="wide_wrapper text-center big-slider-image-container w-auto-h-100">
                                                         @foreach ($project->images as $image)
                                                             @php
                                                                 $thumb_url = $image->thumb_url;
@@ -390,27 +396,27 @@
                                                                 if (substr($url, 0, 1) != '/') {
                                                                     $url = '/' . $url;
                                                                 }
-                                                                
+
                                                             @endphp
                                                             <div class="mySlides-<?php echo $project->projektname; ?> w-auto-h-100"
-                                                                data-responsive="true" id="wide-<?php echo md5($image->filename); ?>">
+                                                                 data-responsive="true" id="wide-<?php echo md5($image->filename); ?>">
 
                                                                 <img src="{{ url($url) }}"
-                                                                    class="big-slider-image img-responsive w-auto-h-100 en-m-auto"
-                                                                    alt="Nature and sunrise">
+                                                                     class="big-slider-image img-responsive w-auto-h-100 en-m-auto"
+                                                                     alt="Nature and sunrise">
                                                             </div>
                                                         @endforeach
 
                                                     </div>
                                                     <a class="prev en-fs-20"
-                                                        onclick="plusSlides(-1 , '<?php echo $project->projektname; ?>')">&#10094;</a>
+                                                       onclick="plusSlides(-1 , '<?php echo $project->projektname; ?>')">&#10094;</a>
                                                     <a class="next en-fs-20"
-                                                        onclick="plusSlides(1 , '<?php echo $project->projektname; ?>')">&#10095;</a>
+                                                       onclick="plusSlides(1 , '<?php echo $project->projektname; ?>')">&#10095;</a>
 
                                                     <div style="height : 30px;"></div>
 
                                                     <div class="clearfix">
-                                                        <?php $imageCount = 0; ?>
+                                                            <?php $imageCount = 0; ?>
                                                         @foreach ($project->images as $image)
                                                             @php
                                                                 $imageCount++;
@@ -426,22 +432,22 @@
                                                                 if (substr($url, 0, 1) != '/') {
                                                                     $url = '/' . $url;
                                                                 }
-                                                                
+
                                                             @endphp
                                                             @if ($user->rolle == 0)
                                                                 <div class="column clearfix"
-                                                                    id="slide-<?php echo md5($image->filename); ?>">
+                                                                     id="slide-<?php echo md5($image->filename); ?>">
                                                                     <div class="clearfix text-center"
-                                                                        style="background : grey">
+                                                                         style="background : grey">
 
                                                                     </div>
                                                                     <div class="image-wrapper">
                                                                         <img id="slideimg-<?php echo md5($image->filename); ?>"
-                                                                            class="demo-<?php echo $project->projektname; ?> cursor"
-                                                                            src="{{ url($thumb_url) }}"
-                                                                            style="width:100%"
-                                                                            onclick="currentSlide(<?php echo $imageCount; ?> , '<?php echo $project->projektname; ?>')"
-                                                                            alt="Nature and sunrise">
+                                                                             class="demo-<?php echo $project->projektname; ?> cursor"
+                                                                             src="{{ url($thumb_url) }}"
+                                                                             style="width:100%"
+                                                                             onclick="currentSlide(<?php echo $imageCount; ?> , '<?php echo $project->projektname; ?>')"
+                                                                             alt="Nature and sunrise">
                                                                     </div>
                                                                 </div>
                                                             @endif
@@ -468,7 +474,7 @@
                 <div class="modal-body">
 
                     <iframe id="iframeYoutube" width="100%" height="300px" src="" frameborder="0"
-                        allowfullscreen></iframe>
+                            allowfullscreen></iframe>
 
                 </div>
                 <div class="modal-footer">
@@ -478,9 +484,9 @@
         </div>
     </div>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Youtube popup
-            $(document).on("click", ".youtube-btn", function() {
+            $(document).on("click", ".youtube-btn", function () {
                 var link = $(this).attr('link');
                 var newarr = link.split('/');
                 if (newarr.length == 4) {
@@ -491,7 +497,7 @@
                 }
             });
 
-            $("#myYoutube").on("hidden.bs.modal", function() {
+            $("#myYoutube").on("hidden.bs.modal", function () {
                 $("#iframeYoutube").attr("src", "#");
             });
 
@@ -520,7 +526,7 @@
                 data: {
                     fileName: imageName
                 },
-                success: function(response) {
+                success: function (response) {
                     $('#thumb-' + md5).remove();
                     // $('#wide-'+md5).remove();
                     $('#slide-' + md5).remove();
@@ -531,11 +537,12 @@
         function closeModal(projectName) {
             document.getElementById('myModal-' + projectName).style.display = "none";
         }
+
         var slideIndex = {};
-        // <?php foreach ($projects as $project) { ?>
+        <?php foreach ($projects as $project) { ?>
         //   slideIndex["<?php echo $project->projektname; ?>"] = 1;
         //   showSlides(slideIndex["<?php echo $project->projektname; ?>"], "<?php echo $project->projektname; ?>");
-        // <?php } ?>
+        <?php } ?>
 
         function plusSlides(n, projectName) {
             showSlides(slideIndex[projectName] += n, projectName);
@@ -640,7 +647,7 @@
             color: #c9c9c9;
         }
 
-        .row>.column {
+        .row > .column {
             padding: 0 8px;
         }
 

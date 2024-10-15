@@ -78,6 +78,6 @@
     'normal' => $rootDir . '/lib/fonts/DejaVuSerif',
   ),
   'calibri' => array(
-    'normal' => $fontDir . '/calibri-normal_9a1a22365937e465cd89131329ed1862',
+    'normal' => $fontDir . '/calibri-normal_9be8814d1f36220bdf30c7d6a733cbaf',
   ),
 ) ?>

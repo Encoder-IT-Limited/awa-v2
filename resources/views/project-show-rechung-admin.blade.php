@@ -81,7 +81,7 @@
                       @endif
 
                       @if($project->special==0)
-                      <button class="btn btn-primary action-special" dataValue="1" id="{{$project->id}}">Spezialprojekt</button>
+{{--                      <button class="btn btn-primary action-special" dataValue="1" id="{{$project->id}}">Spezialprojekt</button>--}}
                       @else
                       <button class="btn btn-primary action-special" dataValue="0" id="{{$project->id}}">Kein Spezialprojekt mehr</button>
                       @endif

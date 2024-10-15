@@ -1,3 +1,4 @@
+@php use App\Cat; @endphp
 @extends('layouts.app')
 
 <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/42.0.0/ckeditor5.css"/>
@@ -27,64 +28,108 @@
             @csrf
             @method('POST')
 
+            <label>
+                <input type="radio" name="type" value="create" checked>
+                <span>Create</span>
+            </label>
+            <hr>
+            <br>
+            <br>
             <div class="flex-wrap d-flex flex-row justify-content-between align-content-center gap-4">
-                <label>
-                    <input type="radio" name="type" value="create" checked>
-                    <span>Create</span>
-                </label>
-
                 <div>
                     <label>
-                        <input type="radio" name="type" value="update" >
+                        <input type="radio" name="type" value="update"
+                               @isset($_GET['search_name']) checked @endisset>
                         <span>Update</span>
                     </label>
                     <label for="name" class="ml-4">
                         <span>Search name:</span>
-                        <input type="text" name="search_name" class="form-control">
+                        <input type="text" name="search_name" class="form-control"
+                               value="{{ isset($_GET['search_name']) ? $_GET['search_name'] : '' }}">
                     </label>
                 </div>
             </div>
-            <br>
-            <br>
 
 
             <br>
             <div>
                 <label for="name">
                     <span>New name:</span>
-                    <input type="text" name="name" class="form-control">
+                    <input type="text" name="name" class="form-control"
+                           value="{{ isset($cat) ? $cat->name : '' }}">
                 </label>
             </div>
             <br>
             <div>
                 <label for="name">
                     <span>Code:</span>
-                    <input type="text" name="code" class="form-control">
+                    <input type="text" name="code" class="form-control"
+                           value="{{ isset($cat) ? $cat->code : '' }}">
                 </label>
             </div>
             <br>
             <!-- Create the editor container -->
-            <textarea id="description" name="description"></textarea>
+            <textarea id="description" name="description">{!! isset($cat) ? $cat->fulldescription : '' !!}</textarea>
             <br>
             <div>
                 <button type="submit" class="btn btn-success">Save</button>
             </div>
         </form>
 
-        <div>
-            @isset($cat)
-                <div>
-                    <h3>Category name:</h3>
-                    <div>{{$cat->name}}</div>
-                </div>
-                <br>
-                <div>
-                    <h3>Category description:</h3>
-                    <div>{!! $cat->fulldescription !!}</div>
-                </div>
-                <br>
-            @endisset
-        </div>
+        {{--        <div>--}}
+        {{--            @isset($cat)--}}
+        {{--                <div>--}}
+        {{--                    <h3>Category name:</h3>--}}
+        {{--                    <div>{{$cat->name}}</div>--}}
+        {{--                </div>--}}
+        {{--                <br>--}}
+        {{--                <div>--}}
+        {{--                    <h3>Category description:</h3>--}}
+        {{--                    <div>{!! $cat->fulldescription !!}</div>--}}
+        {{--                </div>--}}
+        {{--                <br>--}}
+        {{--            @endisset--}}
+        {{--        </div>--}}
+    </div>
+
+
+    <div class="container">
+        @php
+            $categories = Cat::all();
+        @endphp
+        <h3>All Categories List</h3>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Description</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($categories as $category)
+                <tr>
+                    <td>{{$category->id}}</td>
+                    <td>{{$category->name}}</td>
+                    <td>{{$category->code}}</td>
+                    <td>{!! $category->fulldescription !!}</td>
+                    <td class="d-flex">
+                        <a href="{{ route('developer-update-category', ['search_name' => $category->name]) }}"
+                           class="btn btn-primary">Update</a>
+
+                        <form action="{{ route('delete-category', ['id' => $category->id]) }}" method="POST"
+                              class="d-inline">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
     </div>
 @endsection
 

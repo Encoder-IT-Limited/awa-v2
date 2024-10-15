@@ -40,7 +40,7 @@ class SendInvoice extends Mailable
         ->markdown('emails.SendInvoice');
 
         if($this->template) {
-            $mail = $mail->attachData($this->pdf->output(), "AWA-Invoice-2024.pdf", ['mime '=>' application/pdf']);
+            $mail = $mail->attachData($this->pdf->output(), "AWA-Invoice-2025.pdf", ['mime '=>' application/pdf']);
         }
 
         return $mail;
